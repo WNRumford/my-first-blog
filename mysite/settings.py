@@ -25,7 +25,7 @@ SECRET_KEY = '1gi_f8u5i4%3#tg$!!*59mhdamf9dhu&c-^!t*6uy_u#2_l=&i'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 #не забудьизменить эту настройку когда будешь деплоить сайт!!!
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', 'WNRumford.pythonanywhere.com']
 
 
 # Application definition
