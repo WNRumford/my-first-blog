@@ -1,38 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-
-	<title>Main</title>
-</head>
-<body>
-	<div class="w3-container w3-blue">
-		<h1>This is just testing page!</h1>
-		<p>It is my first template in my first Django application</p>
-	</div>
-	<div class="w3-container w3-teal">
-		<div class="w3-panel w3-pink w3-card-4"><h1>Привет, Олеся!!!</h1></div>
-	</div>
-
+{% extends 'blog/base.html' %}
 	<div class="w3-panel w3-card-4">
-	
+	{% block content %}
 		{% for post in posts %}
 		    <div class="w3-panel w3-pale-blue w3-card-2">
 		    	
 		    		<i class="w3-text-green"> Опубликовано: {{post.published_date}}</i>
 		    		<h2 class="w3-btn w3-text-blue">{{post.title}}</h2>
-		    		<p class="w3-panel w3-text-brown">{{post.text}}</p>
+		    		<p class="w3-panel w3-text-brown">{{post.text|linebreaksbr}}</p>
 		    	
 		    </div>
 		{% endfor %}
-		
+	{% endblock %}	
 	</div>
-
-	<div class="w3-container w3-blue">
-	    <h1>Footer</h1>
-		<p class="w3-panel">And this is footer</p>
-		<p class="w3-panel w3-white w3-card-4">Povered by me on Django</p>
-	</div>
-</body>
-</html>

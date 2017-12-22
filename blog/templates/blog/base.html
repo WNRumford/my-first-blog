@@ -1,0 +1,59 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<title>Main</title>
+	<!-- <script src="js.js"></script> -->
+</head>
+<body>
+
+<!-- Sidebar -->
+
+<div class="w3-sidebar w3-bar-block w3-card-2 w3-animate-left" style="display:none" id="mySidebar">
+  <button class="w3-bar-item w3-btn w3-large w3-indigo"
+  onclick="w3_close()">Скрыть меню <i class="fa fa-close w3-right"></i></button>
+  <p><a href="#" class="w3-bar-item w3-btn w3-border-bottom">Главная страница<i class="fa fa-home w3-right w3-indigo"></i></a></p>
+  <p><a href="#" class="w3-bar-item w3-btn w3-border-bottom">Добавить материал<i class="fa fa-pencil w3-right w3-indigo"></i></a></p>
+  <p><a href="#" class="w3-bar-item w3-btn w3-border-bottom">Оставить комментарий<i class="fa fa-comment w3-right w3-indigo"></i></a></p>
+</div>
+
+
+<!-- content -->
+<div class="w3-container">
+
+<!--*********************************************************************** -->
+<div zclass="w3-main" id="main">
+	<header class="w3-container w3-light-gray" style="background-image: url('{% static 'images/mex.jpg' %}'); background-repeat: no-repeat; background-position: center; height: 457px;">
+	  
+		<button class="w3-btn w3-xlarge" onclick="w3_open()"><i class="fa fa-bars w3-indigo"></i></button>	  	
+	</header>
+
+	<!-- Content ***********************************************************-->
+	<div class="w3-container w3-light-gray w3-padding-16">
+		
+		<div class="w3-container">
+				<h1 class="w3-text-indigo">Истории</h1>
+			
+			{% block content %}
+            {% endblock %}
+			
+		</div>
+
+	</div>
+	<!-- Content ***********************************************************-->
+
+	<footer class="w3-container w3-blue-gray">
+		<div class="w3-panel">
+			<bloquote>Powered by Kirill on W3-CSS</bloquote>
+		</div>
+	</footer>
+<!--*********************************************************************** -->
+</div>
+</div>
+<script src="{% static 'js/sidebar.js' %}"></script>
+</body>
+</html>
